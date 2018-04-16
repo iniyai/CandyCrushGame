@@ -1,33 +1,39 @@
-package main;
+package homework2;
 
 public class Pair {
-	private char value;
-	private byte count;
+	public int row;
+	public int column;
 
-	public Pair(char value, byte count) {
-		this.value = value;
-		this.count = count;
+	public Pair(int row, int column) {
+		this.row = row;
+		this.column = column;
 	}
 
-	public Pair() {
-		this.value = 0;
-		this.count = 0;
+	public int getRow() {
+		return row;
 	}
 
-	public char getValue() {
-		return value;
+	public void setRow(int row) {
+		this.row = row;
 	}
 
-	public void setValue(char value) {
-		this.value = value;
+	public int getColumn() {
+		return column;
 	}
 
-	public byte getCount() {
-		return count;
+	public void setColumn(int column) {
+		this.column = column;
 	}
 
-	public void setCount(byte count) {
-		this.count = count;
+	public boolean isEqual(int r, int c) {
+		return ((r == row) && (c == column));
 	}
 
+	public boolean isEqual(Pair p) {
+		return ((p.row == row) && (p.column == column));
+	}
+
+	public void print() {
+		System.out.println(row + " $ " + column);
+	}
 }
